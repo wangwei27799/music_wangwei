@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:backgroundTint="@android:color/white"
+    android:background="@drawable/bg_banner_round"
+    android:gravity="center_horizontal">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="声明与条款"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"/>
+
+    <!-- 内容文本 -->
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="欢迎使用音乐社区，我们将严格遵守相关法律和隐私政策保护您的个人隐私，请您阅读并同意《用户协议》与《隐私政策》。"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <!-- 不同意按钮（灰色背景，居上） -->
+    <Button
+        android:id="@+id/btn_disagree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不同意"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="1dp"
+        android:onClick="onDisagreeClick"/>
+
+    <!-- 同意并使用按钮（蓝色背景，居下） -->
+    <Button
+        android:id="@+id/btn_agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="同意并使用"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:onClick="onAgreeClick" />
+</LinearLayout>

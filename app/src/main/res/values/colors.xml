@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#00574B</color>   <!-- 深绿色 -->
+    <color name="colorAccent">#00E5FF</color>        <!-- 强调色：亮青色 -->
+
+    <!-- 背景色 -->
+    <color name="colorBackground">#FFFFFF</color>    <!-- 白色背景 -->
+    <color name="colorBackgroundDark">#121212</color> <!-- 深色背景 -->
+
+    <!-- 文本颜色 -->
+    <color name="colorTextPrimary">#212121</color>   <!-- 主要文本色 -->
+    <color name="colorTextSecondary">#757575</color> <!-- 次要文本色 -->
+    <color name="colorTextTertiary">#BDBDBD</color>  <!-- 第三级文本色 -->
+    <color name="colorTextLight">#FFFFFF</color>     <!-- 浅色文本 -->
+
+    <!-- 交互颜色 -->
+    <color name="colorAction">#00796B</color>        <!-- 操作按钮颜色 -->
+    <color name="colorActionLight">#4DB6AC</color>    <!-- 浅色操作按钮 -->
+    <color name="colorActionPressed">#00574B</color> <!-- 按下状态操作按钮 -->
+
+    <!-- 分隔线颜色 -->
+    <color name="colorDivider">#E0E0E0</color>       <!-- 分隔线颜色 -->
+
+    <!-- 播放控制颜色 -->
+    <color name="colorPlayControl">#00796B</color>   <!-- 播放控制颜色 -->
+    <color name="colorPlayProgress">#00E5FF</color>  <!-- 播放进度颜色 -->
+
+    <color name="colorPlayModeOrder">#00796B</color>    <!-- 顺序播放颜色 -->
+    <color name="colorPlayModeRepeat">#FF9800</color>   <!-- 单曲循环颜色 -->
+    <color name="colorPlayModeShuffle">#F44336</color>  <!-- 随机播放颜色 -->
+
+    <!-- 通知栏颜色 -->
+    <color name="colorNotificationBackground">#22000000</color> <!-- 通知背景色 -->
+    <color name="colorNotificationText">#FFFFFF</color>       <!-- 通知文本色 -->
+
+    <!-- 歌词页面颜色 -->
+    <color name="colorLyricBackground">#000000</color>  <!-- 歌词背景色 -->
+    <color name="colorLyricText">#FFFFFF</color>       <!-- 歌词文本色 -->
+    <color name="colorLyricCurrentLine">#00E5FF</color> <!-- 歌词当前行颜色 -->
+</resources>

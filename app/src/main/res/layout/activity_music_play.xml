@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B22222"
+    android:gravity="center_horizontal">
+
+    <!-- 关闭按钮，右上角 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_close"
+        android:tint="@android:color/white" />
+
+    <!-- 专辑封面区域，让封面有圆形裁剪效果 -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="80dp">
+
+    <!-- 圆形背景（模拟唱片外圈效果，可选） -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/disc_bg"
+            android:scaleType="centerCrop" />
+
+        <!-- 专辑封面，设置圆形裁剪 -->
+        <ImageView
+            android:id="@+id/iv_album"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_cover"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:background="@drawable/shape_circle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 歌曲名称 -->
+            <TextView
+                android:id="@+id/tv_song_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="left"
+                android:text="到此为止"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <!-- 歌手名称 -->
+            <TextView
+                android:id="@+id/tv_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="30dp"
+                android:text="徐佳莹"
+                android:layout_gravity="left"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <!-- 喜欢按钮-->
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/heart"
+            android:tint="@android:color/white" />
+
+    </RelativeLayout>
+
+
+    <!-- 进度条及时间显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:55"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <SeekBar
+        android:id="@+id/sb_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:progressTint="@android:color/white"
+        android:thumbTint="@android:color/white"
+        android:progress="25"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/tv_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:45"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+    </LinearLayout>
+
+        <!-- 底部操作按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_play_mode"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="25sp"
+            android:src="@drawable/ic_repeat"
+            android:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_previous"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_play_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_play"
+            android:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@android:drawable/ic_media_next"
+            android:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_playlist"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25sp"
+            android:src="@drawable/ic_playlist"
+            android:tint="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

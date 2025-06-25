@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- 应用Logo -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:src="@drawable/m_logo"
+        android:contentDescription="应用Logo" />
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="音乐社区"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="16dp"-->
+<!--        android:textFontWeight="900"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:text="听你想听"-->
+<!--        android:textColor="#88000000"-->
+<!--        android:textSize="12dp"/>-->
+
+    <!-- 隐私内容布局 -->
+    <LinearLayout
+        android:id="@+id/privacy_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:background="@drawable/bg_banner_round">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="欢迎使用音乐社区应用"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我们重视您的隐私和数据安全。在使用我们的服务前，请仔细阅读"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_user_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户协议"
+                android:background="@null"
+                android:textColor="#007AFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="和"
+                android:textSize="14sp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp" />
+
+            <Button
+                android:id="@+id/btn_privacy_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="隐私协议"
+                android:background="@null"
+                android:textColor="#007AFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击“同意并使用”，即表示您同意我们的用户协议和隐私协议。"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="同意并使用"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="#007AFF"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btn_disagree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="不同意"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:background="@android:color/transparent"
+            android:padding="12dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:backgroundTint="@color/colorPrimary">
+
+    <!-- 音乐播放控制区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 歌曲信息和列表切换按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            tools:ignore="MissingClass">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/floating_cover_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/default_cover"
+                android:layout_marginEnd="12dp"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/floating_music_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平凡之路"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/floating_artist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朴树"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+            <!-- 播放控制按钮 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/floating_prev"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_previous"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    app:tint="@android:color/black"
+                    android:contentDescription="上一首" />
+
+                <ImageView
+                    android:id="@+id/floating_play_pause"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_play"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    app:tint="@android:color/black"
+                    android:contentDescription="播放/暂停" />
+
+                <ImageView
+                    android:id="@+id/floating_next"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_next"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    app:tint="@android:color/black"
+                    android:contentDescription="下一首" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/floating_playlist"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_playlist"
+                android:padding="4dp"
+                android:clickable="true"
+                app:tint="@android:color/black"
+                android:contentDescription="播放列表" />
+        </LinearLayout>
+
+        <!-- 进度条 -->
+        <SeekBar
+            android:id="@+id/floating_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/colorPrimary"
+            android:thumbTint="@color/colorPrimary"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp" />
+    </LinearLayout>
+
+    <!-- 音乐列表区域，默认隐藏 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/floating_music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="88dp"
+        android:maxHeight="250dp"
+        android:clipToPadding="false"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+</FrameLayout>

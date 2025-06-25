@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp">
+
+    <!-- 轮播图 - 位于底部 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/banner_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/search_container"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="4dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/banner_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- 指示器 - 位于轮播图下方 -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/banner_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/banner_card_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        app:tabTextColor="@color/black"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="4dp" />
+
+    <!-- 搜索框容器 - 固定在顶部 -->
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="搜索音乐、歌手或专辑"
+            android:textColorHint="@color/black"
+            android:paddingStart="8dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:imeOptions="actionSearch" />
+
+        <TextView
+            android:id="@+id/cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="#FF00796B"
+            android:paddingStart="16dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="200dp">-->
+
+<!--    &lt;!&ndash; 搜索框容器 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="8dp"-->
+<!--        android:elevation="4dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:radius="24dp">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/ic_search"-->
+<!--            android:padding="4dp"-->
+<!--            android:layout_gravity="center_vertical" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/search_edit_text"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:hint="搜索音乐、歌手或专辑"-->
+<!--            android:paddingStart="8dp"-->
+<!--            android:textSize="14sp"-->
+<!--            android:maxLines="1"-->
+<!--            android:imeOptions="actionSearch" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/cancel_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="取消"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="#FF00796B"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_gravity="center_vertical" />-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; 轮播图 &ndash;&gt;-->
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/banner_view_pager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+<!--    &lt;!&ndash; 指示器 &ndash;&gt;-->
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/banner_indicator"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        app:tabIndicatorColor="#FF00796B"-->
+<!--        app:tabIndicatorHeight="4dp"-->
+<!--        app:tabPaddingStart="8dp"-->
+<!--        app:tabPaddingEnd="8dp" />-->
+
+<!--</RelativeLayout>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="200dp"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/banner_view_pager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/banner_indicator"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:tabIndicatorColor="#FF00796B"-->
+<!--        app:tabIndicatorHeight="4dp"-->
+<!--        app:tabPaddingStart="8dp"-->
+<!--        app:tabPaddingEnd="8dp" />-->
+
+<!--</LinearLayout>-->
